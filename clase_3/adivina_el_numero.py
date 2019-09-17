@@ -3,7 +3,7 @@ import random
 numero_aleatorio = random.randint(1, 100)
 intentos_realizados = 1
 
-print("Bienvenido/a, ingrese un número del 1 al 100 para jugar")
+print("Bienvenido/a, ingrese un número del 1 al 100 para adivinar el número secreto")
 
 numero_ingresado = int(input("Ingrese un número: "))
 
