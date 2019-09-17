@@ -20,6 +20,6 @@ while numero_ingresado != numero_aleatorio:
 	intentos_realizados += 1
 	numero_ingresado = int(input("Ingrese un número: "))
 
-print("Felicitaciones! Adivinaste el número en ", intentos_realizados, "intentos")
+print("Felicitaciones! Adivinaste el número en", intentos_realizados, "intentos")
 
 input("Presione ENTER para salir")
