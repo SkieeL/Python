@@ -1,30 +1,34 @@
 import random
 
 listado_de_palabras = (
-	'sol',
 	'hola',
+	'chau',
 	'mesa',
 	'saludar',
-	'dormir',
+	'comer',
 	'heladera'
 )
 
-palabra_ordenada_en_lista = []
+palabra_desordenada = []
 palabra_ordenada = random.choice(listado_de_palabras)
-# Acá se debería transformar la palabra ordenada en una lista, que tenga cada caracter en un slot distinto
-palabra_desordenada = random.shuffle(palabra_ordenada_en_lista)
+
+for letra in palabra_ordenada:
+	palabra_desordenada += letra
+
+random.shuffle(palabra_desordenada)
+intentos_realizados = 0
 palabra_ingresada = ''
 
-print('Bienvenido/a! La siguiente palabra se encuentra desordenada, ingrese la palabra que se puede formar')
-print(palabra_desordenada.upper())
+print('Bienvenido/a!', '\nLa siguiente palabra se encuentra desordenada:')
+print(''.join(palabra_desordenada).upper(), '\n')
 
 while palabra_ingresada.lower() != palabra_ordenada:
-	palabra_ingresada = input('Ingrese una palabra: ')
+	if intentos_realizados != 0:
+		print('La palabra ingresada no es correcta, intente nuevamente!')
+
+	palabra_ingresada = input('Ingrese la palabra ordenada: ')
+	intentos_realizados += 1
 else:
-	print('Felicitaciones! Adivinaste la palabra:', palabra_ordenada.title())
+	print('\nFelicitaciones! Adivinaste la palabra en', intentos_realizados, 'intento/s\n')
 
-# random.choice() # Sirve para elegir un elemento random de una secuencia (array, string, etc)
-# random.shuffle() # Sirve para "mezclar" una secuencia mutable (lista) pasada por parámetro
-
-# El programa debe mostrar en pantalla una palabra desordenada (elegida de una lista hardcodeada)
-# El usuario debe ingresar la palabra ordenada y el programa debe verificar si la respuesta es correcta
+input('Presione ENTER para continuar')
