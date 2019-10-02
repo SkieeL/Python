@@ -1,6 +1,6 @@
 import random
 
-listado_de_palabras = (
+LISTADO_DE_PALABRAS = (
 	'hola',
 	'chau',
 	'asiento',
@@ -9,7 +9,7 @@ listado_de_palabras = (
 	'frenos'
 )
 
-listado_de_ayudas = (
+LISTADO_DE_AYUDAS = (
 	'Saludo usado al llegar a un lugar',
 	'Saludo usado al irse de un lugar',
 	'Lugar para sentarse',
@@ -19,8 +19,8 @@ listado_de_ayudas = (
 )
 
 palabra_desordenada = []
-palabra_ordenada = random.choice(listado_de_palabras)
-indice_de_palabra = listado_de_palabras.index(palabra_ordenada)
+palabra_ordenada = random.choice(LISTADO_DE_PALABRAS)
+indice_de_palabra = LISTADO_DE_PALABRAS.index(palabra_ordenada)
 
 for letra in palabra_ordenada:
 	palabra_desordenada += letra
@@ -36,7 +36,7 @@ print('Escriba !pista para obtener una pista', '\n')
 
 while palabra_ingresada.lower() != palabra_ordenada:
 	if palabra_ingresada.lower() == '!pista':
-		print(listado_de_ayudas[indice_de_palabra])
+		print(LISTADO_DE_AYUDAS[indice_de_palabra])
 		intentos_realizados -= 1
 		solicito_pista = True
 	elif intentos_realizados != 0:
