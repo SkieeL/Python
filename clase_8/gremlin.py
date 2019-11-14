@@ -39,7 +39,7 @@ class Gremlin:
 	# Un método que sólo recibe self, no recibe ningún parámetro
 	# Todos los métodos en Python por defecto reciben como parámetro su propia instancia (self)
 	def hablar(self):
-		print('Hola, soy', self.nombre, 'y ahora me siento', self.__humor)
+		print('Hola, soy', self.__nombre, 'y ahora me siento', self.__humor)
 
 	# Método mágico, va a ser llamado cuando el objeto intente ser convertido a string
 	# Sería una sobrecarga de un casteo a string
