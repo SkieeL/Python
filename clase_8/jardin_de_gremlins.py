@@ -21,9 +21,9 @@ class Gremlin:
 		self.__deducir_humor()
 		return 'Ñom, ñom.. Que rico!'
 
-	def jugar(self, jugar=4):
+	def jugar(self, diversion=4):
 		self.__pasar_tiempo()
-		self.__aburrimiento -= jugar
+		self.__aburrimiento -= diversion
 		if self.__aburrimiento < 0:
 			self.__aburrimiento = 0
 		self.__deducir_humor()
