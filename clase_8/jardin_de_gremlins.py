@@ -1,8 +1,8 @@
 class Gremlin:
-	def __init__(self, nombre):
+	def __init__(self, nombre, hambre=0, aburrimiento=0):
 		self.__nombre = nombre
-		self.__hambre = 0
-		self.__aburrimiento = 0
+		self.__hambre = hambre
+		self.__aburrimiento = aburrimiento
 		self.__deducir_humor()
 
 	@property
