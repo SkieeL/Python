@@ -36,3 +36,4 @@ while opcion_ingresada != 3:
         except ValueError:
             print('\nMe estás haciendo trampa, cagón!\n')
             input('Presione Enter y váyase a la mierda')
+            break
