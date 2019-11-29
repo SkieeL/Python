@@ -51,14 +51,6 @@ Microframeworks
 - CherryPy
 
 =============================
-Estructura de proyecto Django
-
-__init__.py = Archivo que indica 
-settings.py = Configuraciones horarias, DB, etc
-urls.py = 
-wsgi.py = Tiene que estar para que el servidor ejecute la app (no se toca)
-
-=============================
 Levantar servidores locales
 
 python -m http.server port # Levanta un servidor HTTP local con Python
@@ -67,16 +59,3 @@ php -S locahost:port # Levanta un servudor HTTP local con PHP
 =============================
 Dark reader (extensión del navegador del profe)
 
-=============================
-ORM: Object Relational Manager
-Capa de abstracción entre el modelo de clase del lenguaje y la DB
-
-VENTAJAS
-- Se abstrae del lenguaje SQL
-- Se puede cambiar el motor de DB sin modificar el código
-- No se trabajan con tablas intermedias, se encarga el ORM
-
-DESVENTAJAS
-- No se tiene control total sobre las consultas SQL
-- Es menos performante
-- DESVENTAJA DE DJANGO: Por defecto NO hace JOINS, si tiene que hacer un JOIN primero hace una consulta principal y luego hace otra consulta por cada registro que debe traer
