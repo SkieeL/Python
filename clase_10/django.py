@@ -8,8 +8,10 @@ wsgi.py = Tiene que estar para que el servidor ejecute la app (no se toca)
 =======================================================
 
 pip install Django # Instala Django
+python3 -m pip install Django # Alternativa para instalar Django
 
 django-admin startproject mysite # Crea un proyecto nuevo 'mysite'
+python3 -m django startproject mysite # Alternativa para crear un nuevo proyecto
 
 python manage.py runserver port # Levanta servidor local
 python manage.py runserver 0:port # Levanta un servidor en local accesible desde la red

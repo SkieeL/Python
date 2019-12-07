@@ -3,6 +3,6 @@ from .models import Question, Choice, Estudiante
 
 # Register your models here.
 
-admin.site.register(Question)
-admin.site.register(Choice)
+# admin.site.register(Question)
+# admin.site.register(Choice)
 admin.site.register(Estudiante)
