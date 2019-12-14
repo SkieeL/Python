@@ -1,0 +1,97 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+    <h2>Datos personales</h2>
+	{% if datos_personales %}
+	<ul>
+		{% for dato in datos_personales %}
+			<li>Nombre: {{ dato.nombre }}</li>
+			<li>Apellido: {{ dato.apellido }}</li>
+			<li>Descripción: {{ dato.descripcion }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron datos personales
+	{% endif %}
+
+    <h2>Datos de contacto</h2>
+	{% if datos_personales %}
+	<ul>
+		{% for dato in datos_personales %}
+			<li>E-mail: {{ dato.email }}</li>
+			<li>Teléfono: {{ dato.telefono }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron datos de contacto
+	{% endif %}
+
+    <h2>Experiencia laboral</h2>
+	{% if experiencias_laborales %}
+	<ul>
+		{% for experiencia in experiencias_laborales %}
+			<li>Nombre de la empresa: {{ experiencia.nombre_empresa }}</li>
+			<li>Tareas principales: {{ experiencia.tareas_principales }}</li>
+			<li>Desde: {{ experiencia.fecha_desde }}</li>
+			{% if experiencia.fecha_hasta == None %}
+				<li>Hasta: Al presente</li>
+			{% else %}
+				<li>Hasta: {{ experiencia.fecha_hasta }}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron experiencias laborales
+	{% endif %}
+
+    <h2>Educación</h2>
+	{% if educaciones %}
+
+		{% for educacion in educaciones %}
+			<ul>
+				<li>Institución: {{ educacion.nombre_institucion }}</li>
+				<li>Título: {{ educacion.titulo }}</li>
+				<li>Desde: {{ educacion.fecha_desde }}</li>
+				{% if educacion.fecha_hasta == None %}
+					<li>Hasta: Al presente</li>
+				{% else %}
+					<li>Hasta: {{ educacion.fecha_hasta }}</li>
+				{% endif %}
+			</ul>
+		{% endfor %}
+
+	{% else %}
+		No se encontraron educaciones
+	{% endif %}
+
+    <h2>Cursos</h2>
+	{% if cursos %}
+
+		{% for curso in cursos %}
+			<ul>
+				<li>Institución: {{ curso.nombre_institucion }}</li>
+				<li>Título: {{ curso.titulo }}</li>
+				<li>Desde: {{ curso.fecha_desde }}</li>
+				{% if curso.fecha_hasta == None %}
+					<li>Hasta: Al presente</li>
+				{% else %}
+					<li>Hasta: {{ curso.fecha_hasta }}</li>
+				{% endif %}
+			</ul>
+		{% endfor %}
+
+	{% else %}
+		No se encontraron cursos
+	{% endif %}
+
+    <h2>Hobbies</h2>
+	{% if hobbies %}
+	<ul>
+		{% for hobbie in hobbies %}
+			<li>Nombre: {{ hobbie.titulo }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron hobbies
+	{% endif %}
+{% endblock %}

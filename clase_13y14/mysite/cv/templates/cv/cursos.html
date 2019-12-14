@@ -1,0 +1,23 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Cursos</h2>
+	{% if cursos %}
+
+		{% for curso in cursos %}
+			<ul>
+				<li>Institución: {{ curso.nombre_institucion }}</li>
+				<li>Título: {{ curso.titulo }}</li>
+				<li>Desde: {{ curso.fecha_desde }}</li>
+				{% if curso.fecha_hasta == None %}
+					<li>Hasta: Al presente</li>
+				{% else %}
+					<li>Hasta: {{ curso.fecha_hasta }}</li>
+				{% endif %}
+			</ul>
+		{% endfor %}
+
+	{% else %}
+		No se encontraron cursos
+	{% endif %}
+{% endblock %}

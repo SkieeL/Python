@@ -1,0 +1,14 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Hobbies</h2>
+	{% if hobbies %}
+	<ul>
+		{% for hobbie in hobbies %}
+			<li>Nombre: {{ hobbie.titulo }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron hobbies
+	{% endif %}
+{% endblock %}

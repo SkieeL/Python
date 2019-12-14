@@ -1,0 +1,18 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Datos personales</h2>
+	{% if datos_personales %}
+	<ul>
+		{% for dato in datos_personales %}
+			<li>Nombre: {{ dato.nombre }}</li>
+			<li>Apellido: {{ dato.apellido }}</li>
+			<li>Fecha de nacimiento: {{ dato.fecha_nacimiento }}</li>
+			<li>Resumen: {{ dato.resumen }}</li>
+			<li>Descripción: {{ dato.descripcion }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron datos personales
+	{% endif %}
+{% endblock %}

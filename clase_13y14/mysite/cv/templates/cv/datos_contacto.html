@@ -1,0 +1,19 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Datos de contacto</h2>
+	{% if datos_contacto %}
+	<ul>
+		{% for dato in datos_contacto %}
+			<li>E-mail: {{ dato.email }}</li>
+			<li>Teléfono: {{ dato.telefono }}</li>
+			<li>Dirección: {{ dato.direccion }}</li>
+			<li>LinkedIn: {{ dato.linkedin }}</li>
+			<li>Twitter: {{ dato.twitter }}</li>
+			<li>Instagram: {{ dato.instagram }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron datos de contacto
+	{% endif %}
+{% endblock %}

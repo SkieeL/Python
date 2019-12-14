@@ -1,0 +1,21 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Experiencia laboral</h2>
+	{% if experiencias_laborales %}
+	<ul>
+		{% for experiencia in experiencias_laborales %}
+			<li>Nombre de la empresa: {{ experiencia.nombre_empresa }}</li>
+			<li>Tareas principales: {{ experiencia.tareas_principales }}</li>
+			<li>Desde: {{ experiencia.fecha_desde }}</li>
+			{% if experiencia.fecha_hasta == None %}
+				<li>Hasta: Al presente</li>
+			{% else %}
+				<li>Hasta: {{ experiencia.fecha_hasta }}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+	{% else %}
+		No se encontraron experiencias laborales
+	{% endif %}
+{% endblock %}

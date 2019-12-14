@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+ 
+    <title>CV Ezequiel E. Mahafud</title>
+ 
+      {% load bootstrap4 %}
+      {% bootstrap_css %}
+</head>
+
+<body>
+    <div class="page-header">
+        <nav class="nav">
+          <a class="nav-link active" href="/">Inicio</a>
+          <a class="nav-link" href="/datos_personales">Datos personales</a>
+          <a class="nav-link" href="/datos_contacto">Datos de contacto</a>
+          <a class="nav-link" href="/experiencia_laboral">Experiencia laboral</a>
+          <a class="nav-link" href="/educacion">Educación</a>
+          <a class="nav-link" href="/cursos">Cursos</a>
+          <a class="nav-link" href="/hobbies">Hobbies</a>
+        </nav>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% bootstrap_javascript jquery='full' %}
+</body>

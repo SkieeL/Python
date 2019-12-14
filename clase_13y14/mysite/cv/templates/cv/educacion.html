@@ -1,0 +1,23 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+	<h2>Educación</h2>
+	{% if educaciones %}
+
+		{% for educacion in educaciones %}
+			<ul>
+				<li>Institución: {{ educacion.nombre_institucion }}</li>
+				<li>Título: {{ educacion.titulo }}</li>
+				<li>Desde: {{ educacion.fecha_desde }}</li>
+				{% if educacion.fecha_hasta == None %}
+					<li>Hasta: Al presente</li>
+				{% else %}
+					<li>Hasta: {{ educacion.fecha_hasta }}</li>
+				{% endif %}
+			</ul>
+		{% endfor %}
+
+	{% else %}
+		No se encontraron carreras
+	{% endif %}
+{% endblock %}
