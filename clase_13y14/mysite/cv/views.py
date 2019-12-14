@@ -40,7 +40,7 @@ def datos_contacto(request):
     return render(request, 'cv/datos_contacto.html', context)
 
 def experiencia_laboral(request):
-    experiencias_laborales = list(ExperienciaLaboral.objects.all())
+    experiencias_laborales = list(ExperienciaLaboral.objects.all().order_by('-fecha_desde'))
     context = {'experiencias_laborales': experiencias_laborales }
     return render(request, 'cv/experiencia_laboral.html', context)
 
@@ -48,6 +48,7 @@ def educacion(request):
     educaciones = list(
     	Capacitacion.objects
     	.filter(tipo_capacitacion__nombre_tipo_capacitacion='Educacion')
+    	.order_by('-fecha_desde')
     )
     context = {'educaciones': educaciones }
     return render(request, 'cv/educacion.html', context)
@@ -56,6 +57,7 @@ def cursos(request):
     cursos = list(
     	Capacitacion.objects
     	.filter(tipo_capacitacion__nombre_tipo_capacitacion='Curso')
+    	.order_by('-fecha_desde')
     )
     context = {'cursos': cursos }
     return render(request, 'cv/cursos.html', context)
