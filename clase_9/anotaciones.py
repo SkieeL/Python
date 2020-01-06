@@ -21,3 +21,6 @@ Interfaz gráfica Linux: Hay un montón de entornos gráficos
 Wrapper: Envoltorio que necesita Python para acceder a las funciones escritas en C/C++
 
 Se necesita instalar módulo "TkInter" en Python -> apt-get install python-tk
+
+• Documentación de Tkinter: https://docs.python.org/3.8/library/tkinter.html
+• Tutorial de Tkinter: https://likegeeks.com/es/ejemplos-de-la-gui-de-python/

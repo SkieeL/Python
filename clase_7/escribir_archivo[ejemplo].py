@@ -1,4 +1,4 @@
 print("Creando archivo")
-archivo = open("archivito.txt", "w")
+archivo = open("archivos/archivito.txt", "w")
 archivo.write("Hola!") # Escribe el archivo
 archivo.close()

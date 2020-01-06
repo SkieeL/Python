@@ -11,5 +11,3 @@
 .remove(elemento) # Elimina una elemento de una lista
 
 # Para eliminar un elemento de un diccionario se usa: del diccionario[key]
-
-# El ejercicio de consolidación es un AHORCADO
